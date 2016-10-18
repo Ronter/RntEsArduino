@@ -6,7 +6,7 @@
 RntEs rnt(RNT_PIN);
 
 void setup() {
-  Serial.begin(250000);
+  Serial.begin(9600);
 }
 
 void loop() {
