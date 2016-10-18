@@ -71,7 +71,7 @@ uint8_t RntEs::crc8(uint8_t *buffer, uint8_t size) {
 		bit_counter = 8;
 		do {
 			feedback_bit = (crc^data) & 0x01;
-			if(feedback_bit == 0x01) crc ^= 0x18;		//0X18 = X^8+X^5+X^4+X^0
+			if(feedback_bit == 0x01) crc ^= 0x18;
 			crc = (crc>>1) & 0x7F;
 			if(feedback_bit == 0x01) crc |= 0x80;
 			data >>= 1;
